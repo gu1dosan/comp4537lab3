@@ -3,7 +3,8 @@ const url = require('url');
 const utils = require('./modules/utils');
 const MESSAGES = require('./lang/en/en.js');
 const fs = require('fs');
-const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config()
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
@@ -45,6 +46,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(3000, () => {
-  console.log('Server is running on port 3000');
+server.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
