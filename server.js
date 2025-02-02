@@ -32,7 +32,7 @@ class Server {
             res.writeHead(400, { 'Content-Type': 'text/plain' });
             res.end('Bad Request: No text provided');
           }
-      } else if (['/readFile/','/readFile'].indexOf(parsedUrl.pathname)>-1) {
+      } else if (parsedUrl.pathname === '/readFile/file.txt') {
         fs.readFile('file.txt', 'utf8', (err, data) => {
           if (err) {
             res.writeHead(404, { 'Content-Type': 'text/plain' });
