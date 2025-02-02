@@ -1,3 +1,7 @@
+node_modules/
+.env
+*.log
 /app.js
 /file.txt
+/modules/math.js
 /HeDebuggingLab3.png
