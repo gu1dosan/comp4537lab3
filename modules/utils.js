@@ -1,6 +1,8 @@
-function getDate() {
-  const date = new Date();
-  return date.toString();
+class Utils {
+  static getDate() {
+    const date = new Date();
+    return date.toString();
+  }
 }
 
-module.exports = { getDate };
+module.exports = { Utils };
